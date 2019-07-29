@@ -1,0 +1,34 @@
+<div style="margin-top:15px;text-align:center">
+    <hr>
+    <h2>Work Log</h2>
+</div>
+
+<div class="table-view">
+
+    <div style="margin-bottom:15px;">
+        Date : {{date}}
+    </div>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>Project</th>
+                <th>Task Title</th>
+                <th>Task Link</th>
+                <th>Hours Spent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let log of logs">
+                <td>{{log.project}}</td>
+                <td>{{log.title}}</td>
+                <td><a href="{{log.link}}">Link</a></td>
+                <td>{{log.hours}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>Total Hours : {{totalHours}}</div>
+
+</div>
+
+<button class="btn btn-primary" (click)="copyTable()">Copy Table</button>

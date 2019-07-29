@@ -1,0 +1,17 @@
+<div class="flex-container">
+    <div class="form-group flex-item">
+        <input type="text" class="form-control" placeholder="Project" [(ngModel)]="log.project">
+    </div>
+    <div class="form-group flex-item">
+        <input type="text" class="form-control" placeholder="Title (Task)" [(ngModel)]="log.title">
+    </div>
+    <div class="form-group flex-item">
+        <input type="text" class="form-control" placeholder="Link (Task)" [(ngModel)]="log.link">
+    </div>
+    <div class="form-group flex-item">
+        <input type="text" class="form-control" placeholder="Hours Spent" [(ngModel)]="log.hours">
+    </div>
+    <div class="form-group flex-item">
+        <button class="btn btn-danger btn-block" (click)="deleteLog(log.id)">X</button>
+    </div>
+</div>
